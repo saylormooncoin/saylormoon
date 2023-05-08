@@ -115,15 +115,33 @@ body {
         transform: translateX(1);
     }
 }
+        
+        .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 50%;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
     </style>
 </head>
 <body>
-         <h1 id="titleInit">╰(◡‿◡✿╰)****SAYLOR M00N****(づ｡◕‿‿◕｡)づ</h1>
-        <div>
-            <img src="./logo.png" alt="Logo" style="width: 50%; height: auto;">
-        </div>
-            <h3 id="totalClaimed">Total Claimed: 0</h1>
-        <div>
+    <div class="content">
+        <h1 id="titleInit">╰(◡‿◡✿╰)****SAYLOR M00N****(づ｡◕‿‿◕｡)づ</h1>
+        <img src="./logo.png" alt="Logo" class="logo">
+        <h3 id="totalClaimed">Total Claimed: 0</h3>
+        <div class="buttons">
             <button id="connectButton">Connect ٩◔‿◔۶</button>
             <button id="claimButton" disabled>Claim ヾ(●⌒∇⌒●)ﾉ</button>
         </div>
