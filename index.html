@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Claim Tokens</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gloria Hallelujah', cursive;
+    background: #f9deeb;
+    border-radius: 10px;
+    padding: 10px;
+    color: #a01d73;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: #f9deeb;
+    color: #a01d73;
+    border: 2px solid #a01d73;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+button:hover {
+    background-color: #a01d73;
+    color: #f9deeb;
+}
+
+body {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #a01d73;
+    background-color: #f9deeb;
+    background: linear-gradient(315deg, #f9deeb 3%, #a01d73 38%, #f9deeb 68%, #a01d73 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    margin: 20px;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    overflow: hidden;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <img src="./logo.png" alt="Logo" style="width: 50%; height: auto;">
+        </div>
+            <h1 id="totalClaimed">Total Claimed: 0</h1>
+        <div>
+            <button id="connectButton">Connect Wallet</button>
+            <button id="claimButton" disabled>Claim Tokens</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
